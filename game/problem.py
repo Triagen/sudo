@@ -4,17 +4,16 @@ Created on Thu Dec  1 22:40:51 2022
 
 @author: Triagen
 """
-from ..util import raiseNotDefined
+from . import util
 
-class SearchProblem:
+
+class Problem:
     """
-    This class outlines the structure of a search problem, but doesn't implement
-    any of the methods (in object-oriented terminology: an abstract class).
-
-    You do not need to change anything in this class, ever.
+    A problem has a startState, successors of any particular state,
+    a goalState and costs of any actions.
     """
 
-    def getStartState(self):
+    def get_start_state(self):
         """
         Get the start state of the problem.
 
@@ -23,9 +22,9 @@ class SearchProblem:
         The start state of the problem.
 
         """
-        raiseNotDefined()
+        util.raise_not_defined()
 
-    def isGoalState(self, state)->bool:
+    def is_goal_state(self, state) -> bool:
         """
         Returns True if and only if the state is a valid goal state.
 
@@ -40,9 +39,9 @@ class SearchProblem:
             Whether the state is a valid goal state or not.
 
         """
-        raiseNotDefined()
+        util.raise_not_defined()
 
-    def getSuccessors(self, state)->list:
+    def get_successors(self, state) -> list:
         """
         For a given state, this should return a list of triples, (successor,
         action, stepCost), where 'successor' is a successor to the current
@@ -60,9 +59,9 @@ class SearchProblem:
             A list of successor to the current state.
 
         """
-        raiseNotDefined()
+        util.raise_not_defined()
 
-    def getCostOfActions(self, actions)->int:
+    def get_cost_of_actions(self, actions) -> int:
         """
         This method returns the total cost of a particular sequence of actions.
 
@@ -70,11 +69,11 @@ class SearchProblem:
         ----------
         actions : TYPE
             A list of actions to take.
-            
+
         Returns
         -------
         int
             The total cost of actions.
 
         """
-        raiseNotDefined()
+        util.raise_not_defined()

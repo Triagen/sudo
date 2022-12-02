@@ -5,24 +5,26 @@ Created on Thu Dec  1 22:06:50 2022
 @author: Triagen
 """
 
-from ..util import raiseNotDefined
+from . import util
+
 
 class Agent:
     """
     An agent can take actions to solve the problem.
     """
+
     def __init__(self):
         pass
-    
-    def registerInitialState(self, state):
+
+    def reigster_initial_state(self, state):
         """
         Register agent's initial state.
 
         """
-        pass
+        util.raise_not_defined()
 
-    def getAction(self, state):
+    def get_action(self, state):
         """
         Next action the agent will take, according to the state.
         """
-        raiseNotDefined()
+        util.raise_not_defined()
